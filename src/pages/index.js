@@ -79,6 +79,7 @@ class IndexPage extends React.Component {
       })
     }, 350)
 
+    window.location = "#";
   }
 
   handleClickOutside(event) {
