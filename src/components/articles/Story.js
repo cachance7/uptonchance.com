@@ -1,12 +1,11 @@
 import React from 'react'
-import Article from '../../components/Article'
+import Article from '../Article'
 import pic01 from '../../images/pic01.jpg'
 
 class Story extends Article {
   renderContent() {
     return (
       <div>
-        <h2 className="major">Intro</h2>
         <span className="image main">
           <img src={pic01} alt="" />
         </span>
@@ -33,5 +32,6 @@ class Story extends Article {
     )
   }
 }
+Story.title = 'Story'
 
 export default Story

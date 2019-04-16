@@ -4,6 +4,14 @@ import Layout from '../components/layout'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
+import { Story, Stay, Event, Rsvp } from '../components/articles'
+
+let articles = [
+  {key: 'story', item: Story},
+  {key: 'stay', item: Stay},
+  {key: 'event', item: Event},
+  {key: 'rsvp', item: Rsvp},
+]
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -24,6 +32,7 @@ class IndexPage extends React.Component {
   componentDidMount () {
     this.timeoutId = setTimeout(() => {
         this.setState({loading: ''});
+        this.handleOpenArticle(window.location.hash.substr(1))
     }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
   }
@@ -95,8 +104,9 @@ class IndexPage extends React.Component {
       <Layout location={this.props.location}>
         <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
           <div id="wrapper">
-            <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
+            <Header articles={articles} onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
             <Main
+              articles={articles}
               isArticleVisible={this.state.isArticleVisible}
               timeout={this.state.timeout}
               articleTimeout={this.state.articleTimeout}

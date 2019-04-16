@@ -87,6 +87,9 @@
 					.heart {
 						display: flex;
 						align-items: center;
+						&:active {
+							animation-name: pulse;
+						}
 					}
 
 					.name {

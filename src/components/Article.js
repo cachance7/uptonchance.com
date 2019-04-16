@@ -8,20 +8,23 @@ class Article extends React.Component {
 
   render() {
     return (
-      <article
-        className={`${this.props.active ? 'active' : ''} ${
-          this.props.articleTimeout ? 'timeout' : ''
-        }`}
-        style={{ display: 'none' }}
-      >
-        {this.renderContent()}
-        <div
-          className="close"
-          onClick={() => {
-            this.props.onCloseArticle()
-          }}
-        />
-      </article>
+      <React.Fragment>
+        <article
+          className={`${this.props.active ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <h2 className="major">{this.constructor.title}</h2>
+          {this.renderContent()}
+          <div
+            className="close"
+            onClick={() => {
+              this.props.onCloseArticle()
+            }}
+          />
+        </article>
+      </React.Fragment>
     )
   }
 }

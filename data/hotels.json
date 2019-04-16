@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Staybridge Suites Seattle - Fremont",
+    "description":
+      "In the Fremont neighborhood on Highway 99 (aka Aurora Ave N) right around the corner from our apartment, 13-minute drive to the venue, has availability Thursday, Friday, Saturday nights (sold out Sunday).",
+    "address1": "3926 Aurora Avenue North",
+    "address2": "Seattle, WA 98103",
+    "phone": "(206) 632-1015",
+    "website": "https://www.ihg.com/staybridge/hotels/us/en/seattle/seasb/hoteldetail?qDest=Seattle,%20WA,%20USA&q",
+    "map": "https://goo.gl/maps/zwNoyw8oX1q"
+  },
+  {
+    "name": "University Inn - A Staypineapple Hotel",
+    "description": "In the University District neighborhood, a five-minute drive to our apartment and a ten-minute drive to the wedding venue, has availability Thursday, Friday, Saturday, Sunday nights.",
+    "address1": "4140 Roosevelt Way NE",
+    "address2": "Seattle, WA 98105",
+    "phone": "(206) 632-5055",
+    "website": "https://www.staypineapple.com/university-inn-seattle-wa",
+    "map": "https://goo.gl/maps/3EoUGdude5R2"
+  },
+  {
+    "name": "Bed & Breakfast Inn Seattle",
+    "description": "In the Capitol Hill neighborhood, a 15-minute drive to our apartment and a ten-minute drive to the wedding venue, has availability Thursday, Friday, Saturday, Sunday nights.",
+    "address1": "1808 East Denny Way",
+    "address2": "Seattle, WA 98122",
+    "phone": "(206) 412-7378",
+    "website": "https://www.seattlebednbreakfast.com/",
+    "map": "https://goo.gl/maps/ThAQLmpSKy92"
+  },
+  {
+    "name": "Bacon Mansion Bed and Breakfast",
+    "description": "In the northern Capitol Hill neighborhood near Volunteer Park, a 13-minute drive to our apartment and a ten-minute drive to the wedding venue, has availability Thursday, Friday, Saturday, Sunday nights.",
+    "address1": "959 Broadway East",
+    "address2": "Seattle, WA 98102",
+    "phone": "(206) 329-1864",
+    "website": "https://www.baconmansion.com/",
+    "map": "https://goo.gl/maps/wVQiHeWmkoB2"
+  }
+]

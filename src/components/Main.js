@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 // import pic03 from '../images/pic03.jpg'
 
-import { Story, Stay, Event, Rsvp } from '../pages/articles'
 
 class Main extends React.Component {
   render() {
@@ -14,26 +13,19 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
-        <Story
-          onCloseArticle={() => this.props.onCloseArticle()}
-          articleTimeout={this.props.articleTimeout}
-          active={this.props.article === 'story'}
-        />
-        <Stay
-          onCloseArticle={() => this.props.onCloseArticle()}
-          articleTimeout={this.props.articleTimeout}
-          active={this.props.article === 'stay'}
-        />
-        <Event
-          onCloseArticle={() => this.props.onCloseArticle()}
-          articleTimeout={this.props.articleTimeout}
-          active={this.props.article === 'event'}
-        />
-        <Rsvp
-          onCloseArticle={() => this.props.onCloseArticle()}
-          articleTimeout={this.props.articleTimeout}
-          active={this.props.article === 'rsvp'}
-        />
+        {
+          this.props.articles.map(({key, item:Article}, index) => {
+            return (
+              <Article
+                key={index}
+                onCloseArticle={() => this.props.onCloseArticle()}
+                articleTimeout={this.props.articleTimeout}
+                active={this.props.article === key}
+              />
+            )
+          }
+          )
+        }
       </div>
     )
   }
@@ -46,6 +38,7 @@ Main.propTypes = {
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
   setWrapperRef: PropTypes.func.isRequired,
+  articles: PropTypes.array,
 }
 
 export default Main
