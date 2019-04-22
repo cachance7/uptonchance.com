@@ -10,6 +10,7 @@
     "eslint": "3.x",
     "eslint-plugin-react": "^7.12.4",
     "gatsby": "^2.0.0",
+    "gatsby-plugin-google-tagmanager": "^2.0.13",
     "gatsby-plugin-manifest": "^2.0.2",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
