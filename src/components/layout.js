@@ -32,23 +32,33 @@ const Layout = ({ children, location }) => {
           site {
             siteMetadata {
               title
+              meta {
+                name
+                content
+              }
             }
           }
         }
       `}
       render={data => (
-        <>
+        <React.Fragment>
           <Helmet
             title={data.site.siteMetadata.title}
-            meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
-            ]}
           >
             <html lang="en" />
+            <link rel="stylesheet" href="css/theme6.css" type="text/css" media="screen" />
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/publicalbum@latest/dist/pa-embed-player.min.js" async defer></script>
+            <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+            {
+              data.site.siteMetadata.meta.map(({name, content}, idx) =>
+                <meta key={idx} name={name} content={content} />
+              )
+            }
           </Helmet>
           {content}
-        </>
+        </React.Fragment>
       )}
     />
   )

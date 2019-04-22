@@ -42,13 +42,3 @@ Main.propTypes = {
 }
 
 export default Main
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

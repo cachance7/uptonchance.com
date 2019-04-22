@@ -6,8 +6,6 @@ const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo rings">
       <span className="icon heart fa-heart" />
-      {/* <span className="icon ring fa-circle-o"></span> */}
-      {/* <span className="icon ring fa-circle-o"></span> */}
     </div>
     <div className="content">
       <div className="inner wrapper">

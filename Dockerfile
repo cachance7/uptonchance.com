@@ -3,6 +3,7 @@ FROM node:10
 WORKDIR /app
 RUN yarn global add gatsby-cli
 
+RUN mkdir ~/.ssh && echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 ADD package.json .
 RUN yarn install
 

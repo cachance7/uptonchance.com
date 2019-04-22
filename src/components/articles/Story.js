@@ -1,6 +1,8 @@
 import React from 'react'
 import Article from '../Article'
+import Album from '../Album'
 import pic01 from '../../images/pic01.jpg'
+
 
 class Story extends Article {
   renderContent() {
@@ -9,25 +11,14 @@ class Story extends Article {
         <span className="image main">
           <img src={pic01} alt="" />
         </span>
-        <p>
-          Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-          aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-          convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna
-          finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the
-          way, check out my <a href="#work">awesome work</a>.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus
-          rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh
-          porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc
-          ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit
-          sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris,
-          fringilla in aliquam at, euismod in lectus. Pellentesque habitant
-          morbi tristique senectus et netus et malesuada fames ac turpis
-          egestas. In non lorem sit amet elit placerat maximus. Pellentesque
-          aliquam maximus risus, vel sed vehicula.
-        </p>
+        <h3>Meeting</h3>
+        <p>We met serendipitously late one Saturday night in Seattle in March 2016. A local music venue, Lo-Fi, was holding a 90s dance night and our respective friend groups saw fit to attend. Had we not crossed paths that night, it is unlikely we would have ever again!</p>
+        <h3>Dating</h3>
+        <p>In the course of a few short years, we have traveled across the globe, camped &amp; hiked all over the Pacific Northwest, and had many late nights on the dance floor.</p>
+        <h3>Engagement</h3>
+        <blockquote>Come on an adventure with me...</blockquote>
+        <p>One sunny Friday morning late last September, we skipped work and took a trip to San Juan Island. It was a beautiful autumn day to spend on the island, doing a bit of hiking and enjoying the outdoors. We took a bottle of wine to the beach towards the evening and at sunset Casey proposed to Lauren.</p>
+        <Album />
       </div>
     )
   }

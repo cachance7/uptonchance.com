@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: "Casey & Lauren's Wedding",
     author: "Casey Chance",
-    description: "All about our wedding on September 7, 2019"
+    meta: [{
+      name: "description", content: "All about our wedding on September 7, 2019"    }, {
+      name: "keywords", content: "wedding, casey chance, lauren upton, seattle",
+    }]
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -15,7 +18,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/heart.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sass',
@@ -26,6 +29,13 @@ module.exports = {
       options: {
         name: 'data',
         path: `${__dirname}/data/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images/`,
       },
     },
   ],

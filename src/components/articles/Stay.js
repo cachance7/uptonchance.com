@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Article from '../Article'
 import Hotel from '../Hotel'
-import pic02 from '../../images/pic02.jpg'
+import seattle from '../../images/seattle-cityscape.jpg'
 
 class Stay extends Article {
   renderContent() {
@@ -31,7 +31,7 @@ class Stay extends Article {
         render={data => (
           <div>
             <span className="image main">
-            <img src={pic02} alt="" />
+            <img src={seattle} alt="" />
             </span>
             <p />
             {

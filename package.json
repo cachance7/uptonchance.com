@@ -19,6 +19,7 @@
     "node-sass": "^4.9.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-grid-gallery": "git+https://github.com/cachance7/react-grid-gallery#latest",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

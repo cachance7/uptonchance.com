@@ -4,12 +4,13 @@ import Layout from '../components/layout'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
-import { Story, Stay, Event, Rsvp } from '../components/articles'
+import { Story, Stay, Event, Registry, Rsvp } from '../components/articles'
 
 let articles = [
   {key: 'story', item: Story},
-  {key: 'stay', item: Stay},
   {key: 'event', item: Event},
+  {key: 'stay', item: Stay},
+  {key: 'registry', item: Registry},
   {key: 'rsvp', item: Rsvp},
 ]
 
@@ -32,7 +33,9 @@ class IndexPage extends React.Component {
   componentDidMount () {
     this.timeoutId = setTimeout(() => {
         this.setState({loading: ''});
-        this.handleOpenArticle(window.location.hash.substr(1))
+        if (window.location.hash.substr(1)) {
+          this.handleOpenArticle(window.location.hash.substr(1))
+        }
     }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
   }
