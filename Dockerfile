@@ -13,6 +13,6 @@ RUN npm install -g http-server
 #RUN yarn global add http-server
 ADD . .
 #RUN yarn build
-RUN npm build
+RUN npm run build
 RUN cd public
 CMD http-server -p 8000
