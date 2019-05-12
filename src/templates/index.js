@@ -4,7 +4,6 @@ import Layout from '../components/layout'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
-import Slider from 'react-viewport-slider'
 
 import { Story, Stay, Event, Registry } from '../components/articles'
 
