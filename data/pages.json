@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Casey + Lauren",
+    "slug": "",
+    "template": "index"
+  },
+  {
+    "title": "Story",
+    "slug": "story",
+    "template": "index"
+  },
+  {
+    "title": "Stay",
+    "slug": "stay",
+    "template": "index"
+  },
+  {
+    "title": "Event",
+    "slug": "event",
+    "template": "index"
+  },
+  {
+    "title": "Gift",
+    "slug": "registry",
+    "template": "index"
+  }
+]

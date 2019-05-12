@@ -4,14 +4,16 @@ import Layout from '../components/layout'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
-import { Story, Stay, Event, Registry, Rsvp } from '../components/articles'
+import Slider from 'react-viewport-slider'
+
+import { Story, Stay, Event, Registry } from '../components/articles'
 
 let articles = [
   {key: 'story', item: Story},
   {key: 'event', item: Event},
   {key: 'stay', item: Stay},
   {key: 'registry', item: Registry},
-  {key: 'rsvp', item: Rsvp},
+  //{key: 'rsvp', item: Rsvp},
 ]
 
 class IndexPage extends React.Component {
@@ -22,7 +24,7 @@ class IndexPage extends React.Component {
       timeout: false,
       articleTimeout: false,
       article: '',
-      loading: 'is-loading'
+      loading: '', //is-loading'
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
@@ -30,11 +32,16 @@ class IndexPage extends React.Component {
     this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
+  articleFromUrl () {
+    return window.location.pathname.substr(1)
+  }
+
   componentDidMount () {
     this.timeoutId = setTimeout(() => {
         this.setState({loading: ''});
-        if (window.location.hash.substr(1)) {
-          this.handleOpenArticle(window.location.hash.substr(1))
+        let article = this.articleFromUrl();
+        if (article) {
+          this.handleOpenArticle(article)
         }
     }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
@@ -57,6 +64,9 @@ class IndexPage extends React.Component {
       isArticleVisible: !this.state.isArticleVisible,
       article
     })
+    this.setState({
+      seenSplash: true
+    })
 
     setTimeout(() => {
       this.setState({
@@ -70,9 +80,12 @@ class IndexPage extends React.Component {
       })
     }, 350)
 
+    // history.pushState(null, null, `/${article}`);
   }
 
   handleCloseArticle() {
+    // Super hack but who cares
+    if (document.getElementById("lightboxBackdrop")) { return }
 
     this.setState({
       articleTimeout: !this.state.articleTimeout
@@ -91,7 +104,7 @@ class IndexPage extends React.Component {
       })
     }, 350)
 
-    window.location = "#";
+    history.pushState(null, null, '/');
   }
 
   handleClickOutside(event) {
@@ -101,6 +114,14 @@ class IndexPage extends React.Component {
       }
     }
   }
+
+  // <Slider>
+  //   <Slider.Item style={{display: this.state.seenSplash ? "none" : "block" }}>
+  //   </Slider.Item>
+  //   <Slider.Item>
+  //     <Header articles={articles} onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
+  //   </Slider.Item>
+  // </Slider>
 
   render() {
     return (

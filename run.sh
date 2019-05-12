@@ -9,4 +9,4 @@ docker run \
   -v $(pwd)/src:/app/src \
   -v $(pwd)/data:/app/data \
   -v $(pwd)/gatsby-config.js:/app/gatsby-config.js \
-  uptonchance.com yarn run develop
+  uptonchance.com npm run develop

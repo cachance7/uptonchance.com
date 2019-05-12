@@ -2,7 +2,8 @@ import 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Gallery from 'react-grid-gallery'
 /** @jsx jsx */
-import { jsx } from "@emotion/core"
+import { jsx } from '@emotion/core'
+// import styles from "../assets/scss/components/_album.scss"
 
 const Album = () => (
   <StaticQuery
@@ -18,31 +19,23 @@ const Album = () => (
           }
         }
       }
-    `
-    }
+    `}
     render={data => (
-      <Gallery images={data.photos.nodes.map(photo => {
-        return {
-          src: photo.src,
-          thumbnail: photo.src,
-        }
-      })} />
+      <Gallery
+        backdropClosesModal={true}
+        enableLightbox={true}
+        enableImageSelection={true}
+        images={data.photos.nodes.map(photo => {
+          return {
+            src: photo.src,
+            thumbnail: photo.src,
+            // thumbnailWidth: 239,
+            // thumbnailHeight: 239,
+          }
+        })}
+      />
     )}
   />
 )
-
-//      <div className="pa-embed-player" css={{width:"100%", height: "480px", display:"none"}}
-//        data-link="https://photos.app.goo.gl/PTKwsCJ6cdVBv31d8"
-//        data-title="Lauren + Casey"
-//        data-description="37 new photos · Album by Casey Chance">
-//        {
-//          data.photos.nodes.map((photo, idx) => {
-//            return <img
-//              key={idx}
-//              data-src={photo.src}
-//            />
-//          })
-//        }
-//      </div>
 
 export default Album

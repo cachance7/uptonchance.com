@@ -21,7 +21,7 @@ class Event extends Article {
                 target="_blank"
                 href="https://goo.gl/maps/i36bJX5jFSCpMFpn7"
               >
-                UW Arboretum - Wisteria Hall
+                Wisteria Hall
                 <br />
                 2300 Arboretum Dr E<br />
                 Seattle, WA 98112
@@ -30,7 +30,7 @@ class Event extends Article {
           </div>
           <div>
             <p css={{marginBottom: "10px"}}>
-              Saturday September 7, 2019<br/>
+              Saturday, September 7, 2019<br/>
               5:30 – 10pm PDT
             </p>
             <AddToCalendar />

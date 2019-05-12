@@ -1,14 +1,18 @@
 FROM node:10
 
 WORKDIR /app
-RUN yarn global add gatsby-cli
+#RUN yarn global add gatsby-cli
+RUN npm install -g gatsby-cli
 
 RUN mkdir ~/.ssh && echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 ADD package.json .
-RUN yarn install
+RUN npm install
+#RUN yarn install
 
-RUN yarn global add http-server
+RUN npm install -g http-server
+#RUN yarn global add http-server
 ADD . .
-RUN yarn build
+#RUN yarn build
+RUN npm build
 RUN cd public
 CMD http-server -p 8000
