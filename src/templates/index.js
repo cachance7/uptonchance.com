@@ -7,6 +7,9 @@ import Footer from '../components/Footer'
 
 import { Story, Stay, Event, Registry } from '../components/articles'
 
+import path from 'path'
+
+
 let articles = [
   {key: 'story', item: Story},
   {key: 'event', item: Event},
@@ -15,6 +18,8 @@ let articles = [
   //{key: 'rsvp', item: Rsvp},
 ]
 
+let sessionKey = "visited"
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
@@ -22,8 +27,8 @@ class IndexPage extends React.Component {
       isArticleVisible: false,
       timeout: false,
       articleTimeout: false,
-      article: '',
-      loading: '', //is-loading'
+      article: this.articleFromUrl(),
+      loading: sessionStorage.getItem(sessionKey) ? '' : 'is-loading'
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
@@ -32,12 +37,13 @@ class IndexPage extends React.Component {
   }
 
   articleFromUrl () {
-    return window.location.pathname.substr(1)
+    return path.basename(window.location.pathname)
   }
 
   componentDidMount () {
     this.timeoutId = setTimeout(() => {
         this.setState({loading: ''});
+        sessionStorage.setItem(sessionKey, true)
         let article = this.articleFromUrl();
         if (article) {
           this.handleOpenArticle(article)

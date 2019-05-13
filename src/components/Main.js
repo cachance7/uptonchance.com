@@ -1,10 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { graphql } from 'gatsby'
-// import pic03 from '../images/pic03.jpg'
-
-
 class Main extends React.Component {
   render() {
     return (
