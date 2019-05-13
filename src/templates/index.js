@@ -24,16 +24,25 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     let loading = ''
+    let visible = false
+    let fromArticle = false
+
     try {
       loading = sessionStorage.getItem(sessionKey) ? '' : 'is-loading'
     } catch (exception) { /* do nothing */ }
 
+    try {
+      // visible = props.location.state.isArticleVisible
+      fromArticle = props.location.state.fromArticle
+    } catch (exception) { /* do nothing */ }
+
     this.state = {
-      isArticleVisible: false,
-      timeout: false,
-      articleTimeout: false,
+      isArticleVisible: fromArticle || false,
+      timeout: fromArticle || false,
+      articleTimeout: fromArticle || false,
       article: '',
-      loading: loading
+      loading: loading,
+      fromArticle: fromArticle
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
@@ -52,6 +61,8 @@ class IndexPage extends React.Component {
         let article = this.articleFromUrl();
         if (article) {
           this.handleOpenArticle(article)
+        } else if (this.state.fromArticle) {
+          this.handleCloseArticle()
         }
     }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
@@ -82,13 +93,13 @@ class IndexPage extends React.Component {
       this.setState({
         timeout: !this.state.timeout
       })
-    }, 325)
+    }, 32)
 
     setTimeout(() => {
       this.setState({
         articleTimeout: !this.state.articleTimeout
       })
-    }, 350)
+    }, 35)
 
     // history.pushState(null, null, `/${article}`);
   }
@@ -105,16 +116,14 @@ class IndexPage extends React.Component {
       this.setState({
         timeout: !this.state.timeout
       })
-    }, 325)
+    }, 325 / (this.state.fromArticle ? 20 : 1))
 
     setTimeout(() => {
       this.setState({
-        isArticleVisible: !this.state.isArticleVisible,
+        isArticleVisible: false,
         article: ''
       })
-    }, 350)
-
-    history.pushState(null, null, '/');
+    }, 350 / (this.state.fromArticle ? 20 : 1))
   }
 
   handleClickOutside(event) {

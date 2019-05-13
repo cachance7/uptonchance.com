@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'gatsby'
 
 class Article extends React.Component {
   renderContent() {
@@ -17,12 +18,7 @@ class Article extends React.Component {
         >
           <h2 className="major">{this.constructor.title}</h2>
           {this.renderContent()}
-          <div
-            className="close"
-            onClick={() => {
-              this.props.onCloseArticle()
-            }}
-          />
+          <Link className="close" to="/" state={{ isArticleVisible: true, fromArticle: true }}/>
         </article>
       </React.Fragment>
     )
