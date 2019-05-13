@@ -93,13 +93,13 @@ class IndexPage extends React.Component {
       this.setState({
         timeout: !this.state.timeout
       })
-    }, 32)
+    }, 325)
 
     setTimeout(() => {
       this.setState({
         articleTimeout: !this.state.articleTimeout
       })
-    }, 35)
+    }, 350)
 
     // history.pushState(null, null, `/${article}`);
   }
@@ -116,14 +116,14 @@ class IndexPage extends React.Component {
       this.setState({
         timeout: !this.state.timeout
       })
-    }, 325 / (this.state.fromArticle ? 20 : 1))
+    }, 325)
 
     setTimeout(() => {
       this.setState({
         isArticleVisible: false,
         article: ''
       })
-    }, 350 / (this.state.fromArticle ? 20 : 1))
+    }, 350)
   }
 
   handleClickOutside(event) {
