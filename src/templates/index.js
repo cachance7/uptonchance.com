@@ -23,12 +23,17 @@ let sessionKey = "visited"
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
+    let loading = ''
+    try {
+      loading = sessionStorage.getItem(sessionKey) ? '' : 'is-loading'
+    } catch (exception) { /* do nothing */ }
+
     this.state = {
       isArticleVisible: false,
       timeout: false,
       articleTimeout: false,
-      article: this.articleFromUrl(),
-      loading: sessionStorage.getItem(sessionKey) ? '' : 'is-loading'
+      article: '',
+      loading: loading
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
@@ -37,7 +42,7 @@ class IndexPage extends React.Component {
   }
 
   articleFromUrl () {
-    return path.basename(window.location.pathname)
+    return path.basename(location.pathname)
   }
 
   componentDidMount () {
