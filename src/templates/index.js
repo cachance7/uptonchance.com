@@ -5,6 +5,8 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 
+import { navigate } from 'gatsby'
+
 import { Story, Stay, Event, Registry } from '../components/articles'
 
 import path from 'path'
@@ -100,8 +102,6 @@ class IndexPage extends React.Component {
         articleTimeout: !this.state.articleTimeout
       })
     }, 350)
-
-    // history.pushState(null, null, `/${article}`);
   }
 
   handleCloseArticle() {
@@ -129,18 +129,10 @@ class IndexPage extends React.Component {
   handleClickOutside(event) {
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
       if (this.state.isArticleVisible) {
-        this.handleCloseArticle();
+        navigate('/', { state: { isArticleVisible: true, fromArticle: true }})
       }
     }
   }
-
-  // <Slider>
-  //   <Slider.Item style={{display: this.state.seenSplash ? "none" : "block" }}>
-  //   </Slider.Item>
-  //   <Slider.Item>
-  //     <Header articles={articles} onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
-  //   </Slider.Item>
-  // </Slider>
 
   render() {
     return (
