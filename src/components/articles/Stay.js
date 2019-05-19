@@ -33,7 +33,7 @@ class Stay extends Article {
             <span className="image main">
             <img src={seattle} alt="" />
             </span>
-            <p>The venue is accessible from any lodging in Seattle. The Capitol Hill and University District neighborhoods are especially convenient. We recommend looking at hotel and <a
+            <p>The wedding venue is accessible from any lodging in Seattle. The Capitol Hill and University District neighborhoods are especially convenient. We recommend looking at hotel and <a
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://www.airbnb.com/s/Seattle--WA--United-States/homes?refinement_paths%5B%5D=%2Fhomes&query=Seattle%2C%20WA%2C%20United%20States&place_id=ChIJVTPokywQkFQRmtVEaUZlJRA&search">Airbnb</a> options in the city and choosing what best meets your needs.</p><p>Below are a few options to get you started.</p>

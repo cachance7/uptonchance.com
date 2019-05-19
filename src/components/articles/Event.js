@@ -70,6 +70,10 @@ class Event extends Article {
           one of our local favorites. A selection of beer, wine, and spirits
           will also be available.
         </p>
+        <h3>Merriment</h3>
+        <p>
+          After dinner, we hope you will join us on the dance floor!
+        </p>
         {/* <Map /> */}
       </React.Fragment>
     )
