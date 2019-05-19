@@ -56,8 +56,8 @@ class Event extends Article {
           </a>
           .
         </p>
-        <h4>Parking</h4>
-        <p>There are parking spots adjacent to the event space. Additional spaces are located at the bottom of the driveway as you approach the building.</p>
+        <h3>Parking</h3>
+        <p>Navigating to Wisteria Hall will take you to the nearby lot, which has a sign for the Donald G. Graham Visitor Center.</p>
         <h3>Attire</h3>
         <p>
           Lauren and Casey will be wearing a dress and tuxedo respectively. You
@@ -65,8 +65,8 @@ class Event extends Article {
         </p>
         <h3>Food &amp; Drink</h3>
         <p>
-          Dinner will be provided by local food trucks after the service. We
-          will be serving a variety of mules made with Rachel’s Ginger Beer —
+          Dinner will be provided by a local food truck after the ceremony. We
+          will be serving a variety of mule cocktails made with Rachel’s Ginger Beer —
           one of our local favorites. A selection of beer, wine, and spirits
           will also be available.
         </p>
