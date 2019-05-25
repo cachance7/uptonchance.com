@@ -127,6 +127,8 @@ class IndexPage extends React.Component {
   }
 
   handleClickOutside(event) {
+    if (document.getElementById("lightboxBackdrop")) { return }
+
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
       if (this.state.isArticleVisible) {
         navigate('/', { state: { isArticleVisible: true, fromArticle: true }})
