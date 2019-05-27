@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://uptonchance.com",
     title: "uptonchance | Casey Chance & Lauren Upton's Seattle Summer Wedding",
     author: "Casey Chance",
     meta: [{
@@ -8,6 +9,8 @@ module.exports = {
     }]
   },
   plugins: [
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
