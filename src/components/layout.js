@@ -44,8 +44,6 @@ const Layout = ({ children, location }) => {
             title={data.site.siteMetadata.title}
           >
             <html lang="en" />
-            <link rel="stylesheet" href="css/theme6.css" type="text/css" media="screen" />
-
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/publicalbum@latest/dist/pa-embed-player.min.js" async defer></script>
             <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
