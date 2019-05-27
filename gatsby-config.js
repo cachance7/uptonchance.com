@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://uptonchance.com",
-    title: "uptonchance | Casey Chance & Lauren Upton's Seattle Summer Wedding",
+    title: "Casey Chance & Lauren Upton's Seattle Summer Wedding",
     author: "Casey Chance",
     meta: [{
       name: "description", content: "Casey Chance and Lauren Upton are getting married on September 7, 2019. This site has everything you need to know about attending the event."    }, {
