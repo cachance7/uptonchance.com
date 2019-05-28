@@ -8,6 +8,7 @@ class Article extends React.Component {
   }
 
   render() {
+    let self = this;
     return (
       <React.Fragment>
         <article
@@ -18,7 +19,8 @@ class Article extends React.Component {
         >
           <h2 className="major">{this.constructor.title}</h2>
           {this.renderContent()}
-          <Link className="close" to="/" state={{ isArticleVisible: true, fromArticle: true }}/>
+          <div className="close" onClick={() => self.props.onCloseArticle()}></div>
+          {/* <Link className="close" to="/" state={{ isArticleVisible: true, fromArticle: true }}/> */}
         </article>
       </React.Fragment>
     )

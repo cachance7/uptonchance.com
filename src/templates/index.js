@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 
 import Header from '../components/Header'
@@ -26,7 +27,6 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     let loading = ''
-    let visible = false
     let fromArticle = false
 
     try {
@@ -34,7 +34,6 @@ class IndexPage extends React.Component {
     } catch (exception) { /* do nothing */ }
 
     try {
-      // visible = props.location.state.isArticleVisible
       fromArticle = props.location.state.fromArticle
     } catch (exception) { /* do nothing */ }
 
@@ -123,7 +122,12 @@ class IndexPage extends React.Component {
         isArticleVisible: false,
         article: ''
       })
+      navigate('/', { state: { isArticleVisible: true, fromArticle: true }})
     }, 350)
+
+    // setTimeout(() => {
+    //   navigate('/', { state: { isArticleVisible: true, fromArticle: true }})
+    // }, 325)
   }
 
   handleClickOutside(event) {
@@ -131,7 +135,12 @@ class IndexPage extends React.Component {
 
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
       if (this.state.isArticleVisible) {
-        navigate('/', { state: { isArticleVisible: true, fromArticle: true }})
+        this.setState({
+          articleTimeout: !this.state.articleTimeout
+        })
+        setTimeout(() => {
+          navigate('/', { state: { isArticleVisible: true, fromArticle: true }})
+        }, 325)
       }
     }
   }
@@ -158,6 +167,10 @@ class IndexPage extends React.Component {
       </Layout>
     )
   }
+}
+
+IndexPage.propTypes = {
+  location: PropTypes.string
 }
 
 export default IndexPage
