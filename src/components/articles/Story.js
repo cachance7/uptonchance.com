@@ -19,6 +19,14 @@ class Story extends Article {
         <blockquote>Come on an adventure with me...</blockquote>
         <p>One sunny Friday morning late last September, we skipped work and took a trip to San Juan Island. It was a beautiful autumn day to spend on the island — sightseeing and enjoying the outdoors. We took a bottle of wine to the beach that evening and at sunset, Casey proposed to Lauren. She said yes!</p>
         <Album />
+        <br />
+        <p> Beautiful photography by {' '}
+            <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.alejandramaria.com/"
+            >Alejandra Maria</a>
+        </p>
       </div>
     )
   }

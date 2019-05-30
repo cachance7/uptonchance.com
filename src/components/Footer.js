@@ -4,6 +4,13 @@ import PropTypes from 'prop-types'
 const Footer = (props) => (
     <footer id="footer" style={props.timeout ? {display: 'none'} : {}}>
         <p className="copyright"></p>
+        <p> Beautiful photography by {' '}
+            <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.alejandramaria.com/"
+            >Alejandra Maria</a>
+        </p>
     </footer>
 )
 
