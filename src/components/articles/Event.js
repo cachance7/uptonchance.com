@@ -63,6 +63,10 @@ class Event extends Article {
           Lauren and Casey will be wearing a dress and tuxedo respectively. You
           may wear whatever makes you feel comfortable (clothes are preferred).
         </p>
+        <h3>Unplugged Ceremony</h3>
+        <p>Our amazing photographer, Alex, will be capturing all of the
+          wonderful moments — with this in mind, we ask that phones and cameras
+          be turned off during the ceremony.</p>
         <h3>Food &amp; Drink</h3>
         <p>
           Dinner will be provided by a local food truck after the ceremony. We
