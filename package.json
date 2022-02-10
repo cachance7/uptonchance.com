@@ -19,7 +19,7 @@
     "gatsby-plugin-sitemap": "^2.1.0",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-json": "^2.1.11",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-images": "^0.5.16",
