@@ -17,7 +17,7 @@ class Story extends Article {
         <p>In the course of a few short years, we have traveled across the globe, camped and hiked all over the Pacific Northwest, and had many late nights on the dance floor.</p>
         <h3>Engagement</h3>
         <blockquote>Come on an adventure with me...</blockquote>
-        <p>One sunny Friday morning late last September, we skipped work and took a trip to San Juan Island. It was a beautiful autumn day to spend on the island — sightseeing and enjoying the outdoors. We took a bottle of wine to the beach that evening and at sunset, Casey proposed to Lauren. She said yes!</p>
+        <p>One sunny Friday morning late last September, we skipped work and took a trip to San Juan Island. It was a beautiful autumn day to spend on the island — sightseeing and enjoying the outdoors. We took a bottle of wine to the beach that evening and at sunset, Casey proposed to Lauren. They said yes!</p>
         <Album />
         <br />
         <p> Beautiful photography by {' '}
